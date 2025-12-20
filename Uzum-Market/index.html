@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzum Market</title>
+    <link rel="stylesheet" href="/src/onlyCSS/main.css">
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+ 
+
+<header class="mainHeader">
+  <div class="container">
+    <div class="headerTop">
+      <div class="logoContainer">
+         <img src="/images/images.png" alt="" class="mainLogo">
+      </div>
+
+      <button class="catalogBtn">
+          <img src="/icons/menu.svg" alt="" class="icon">
+          <span>Каталог</span>
+      </button>
+
+      <div class="searchWrapper">
+          <input type="text" class="searchInput" placeholder="Искать товары...">
+          <button class="searchBtn">
+              <img src="/icons/search.svg" alt="" class="icon">
+          </button>
+      </div>
+
+      <div class="userActions">
+        <div class="actionItem">
+            <img src="/icons/user.svg" alt="" class="icon">
+            <span>Войти</span>
+        </div>
+          <div class="actionItem">
+           <img src="/icons/heart.svg" alt="" class="icon">
+           <span>Избранное</span>
+          </div>
+          <div class="actionItem">
+           <img src="/icons/shopping-cart.svg" alt="" class="icon">
+           <span>Корзина</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <section class="homeSection">
+        <h2 class="sectionTitle">Рекомендации</h2>
+        <div id="recommendationsGrid" class="productGrid"></div>
+    </section>
+
+    <section class="homeSection">
+        <h2 class="sectionTitle">Смартфоны и гаджеты</h2>
+        <div id="electronicsGrid" class="productGrid"></div>
+    </section>
+
+    <section class="homeSection">
+        <h2 class="sectionTitle">Все товары</h2>
+        <div id="productGrid" class="productGrid"></div>
+    </section>
+</main>
+
+<style>
+    body {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        position: relative;
+        width: 100%;
+        height: 420px; 
+        border-radius: 16px;
+        margin: 20px 0px;
+        overflow: hidden;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sectionTitle {
+        margin: 30px 0px 15px;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .homeSection {
+        margin-bottom: 40px;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+      color: rgb(98, 15, 175);
+      width: 40px;
+      height: 40px;
+      
+    }
+
+</style>
+
+       <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+</div>
+
+
+    <script type="module" src="/src/onlyJS/catalog.js"></script>
+</body>
+</html>
