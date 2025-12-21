@@ -16,5 +16,32 @@ export const products = [
         rating: 4.9,
         reviews: 89,
         image: "https://images.uzum.uz/cr1kcmviraat934q2130/original.jpg"
+    },
+    {
+        id: 3,
+        title: "Планшет Apple iPad Pro M4",
+        price: 121120000,
+        oldPrice: 1321277146,
+        rating: 4.8,
+        reviews: 126,
+        image: "https://images.uzum.uz/d2tac3b4eu2hs07rnen0/original.jpg"
+    },
+    {
+        id: 4,
+        title: "Смартфон Samsung Galaxy S25 Ultra",
+        price: 13500000,
+        oldPrice: 2800000,
+        rating: 4.9,
+        reviews: 20,
+        image: "https://images.uzum.uz/cufpaas5j42bjc4bv97g/original.jpg"
+    },
+    {
+        id: 5,
+        title: "Чехол для Samsung Galaxy S25 Ultra",
+        price: 28100,
+        oldPrice: 29000,
+        rating: 5.0,
+        reviews: 28,
+        image: "https://images.uzum.uz/d0h5ct27s4fo7mq8vc5g/original.jpg"
     }
 ];

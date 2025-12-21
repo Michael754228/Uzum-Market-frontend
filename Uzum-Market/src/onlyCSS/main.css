@@ -1,6 +1,171 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
+.container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 20px;
+}
+
+.mainHeader {
+    padding: 15px;
+    border-bottom: 1px solid #edeef0;
+    background: white;
+}
+
+.headerTop {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.mainLogo {
+    height: 32px;
+}
+
+.searchWrapper {
+    flex-grow: 1;
+    display: flex;
+    border: 2px solid #7e7d80; 
+    border-radius: 8px;
+}
+
+.searchInput {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.searchBtn {
+    background: #a2a2a3;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.userActions {
+    display: flex;
+    gap: 20px;
+}
+
+.actionItem {
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0px auto 4px;
+}
+
+/* Сетка, чтобы карточки стояли в ряд */
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* Сама карточка */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.product-card:hover {
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-image-container {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #f2f4f7;
+    position: relative;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card-info {
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 13px;
+    color: #1f2026;
+    height: 34px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.rating {
+    font-size: 12px;
+    color: #8b8e99;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.old-price {
+    font-size: 11px;
+    text-decoration: line-through;
+    color: #8b8e99;
+    margin-bottom: 2px;
+}
+
+.current-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1f2026;
+}
+
+.add-to-cart {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #e2e5eb;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-to-cart:hover {
+    background: #f2f4f7;
+}
+
+.icon-small {
+    width: 18px;
+    height: 18px;
+}

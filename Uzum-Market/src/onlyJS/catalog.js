@@ -1,37 +1,37 @@
-import { products } from './data.js';
+import { products } from './data.js'; 
 
 const grid = document.getElementById('productGrid');
 
 function renderProducts() {
-   grid.innerHTML = products.map(product => `
-       <div class="productCard">
-         <div class="cardImage">
-            <img src="${product.image}" />
-            <button class="favoriteBtn">
-                <img src="/icons/heart.svg" class="iconSmall">
-            </button>
-         </div>
-  
-         <div class="cardInfo">
-           <p class="title">${product.title}</p>
-           
-           <div class="ratingBlock">
-             <img src="/public/icons/Без названия.png" class="">
-             <span class="ratingText">${product.rating} (${product.reviews} отзывов)</span>
-           </div>
+  if (!grid) {
+    return;
+  }  
 
-           <div class="priceBlock">
-             <div class="priceContainer">
-                <p class="oldPrice">${product.oldPrice.toLocaleString()} сум</p>
-                <p class="price">${product.price.toLocaleString()} сум</p>
-             </div>
-             <button class="addToCartBtn" data-id="${product.id}">
-                <img src="/public/icons/shopping-bag.svg" class="iconSmall">
-             </button>
-           </div>
-         </div>
-      </div>
-      `    
+   grid.innerHTML = products.map(product => `
+    <div class="product-card">
+        <div class="card-image-container">
+            <img src="${product.image}" alt="${product.title}">
+            <button class="wishlist-btn">
+                <img src="/icons/heart.svg" class="icon-small">
+            </button>
+        </div>
+        
+        <div class="card-info">
+            <p class="product-title">${product.title}</p>
+            <p class="rating"><img src="/images/Без названия.png">< ${product.rating}</p> 
+            <div class="price-wrapper">
+                <div class="price-block">
+                    <p class="old-price">${product.oldPrice.toLocaleString()} сум</p>
+                    <p class="current-price">${product.price.toLocaleString()} сум</p>
+                </div>
+                <button class="add-to-cart">
+                    <img src="/icons/shopping-bag.svg" class="icon-small">
+                </button>
+            </div>
+        </div>
+    </div>
+    `
     ).join('');
 }
-renderProducts()
+
+renderProducts();
