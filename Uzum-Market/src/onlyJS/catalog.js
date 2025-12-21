@@ -7,8 +7,8 @@ function renderProducts() {
     return;
   }  
 
-   grid.innerHTML = products.map(product => `
-    <div class="product-card">
+grid.innerHTML = products.map(product => `
+    <div class="product-card"> 
         <div class="card-image-container">
             <img src="${product.image}" alt="${product.title}">
             <button class="wishlist-btn">
@@ -18,7 +18,13 @@ function renderProducts() {
         
         <div class="card-info">
             <p class="product-title">${product.title}</p>
-            <p class="rating"><img src="/images/Без названия.png">< ${product.rating}</p> 
+            
+            <div class="rating">
+                <img src="/images/Без названия.png" class="rating-star-icon">
+                <span>${product.rating}</span>
+                <span class="reviews-count">(${product.reviews || 0} отзывов)</span>
+            </div> 
+
             <div class="price-wrapper">
                 <div class="price-block">
                     <p class="old-price">${product.oldPrice.toLocaleString()} сум</p>
@@ -31,7 +37,6 @@ function renderProducts() {
         </div>
     </div>
     `
-    ).join('');
+).join('');
 }
-
 renderProducts();
