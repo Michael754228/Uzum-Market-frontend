@@ -5,6 +5,11 @@
     <title>Uzum Market</title>
     <link rel="stylesheet" href="/src/onlyCSS/main.css">
      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+     <link rel="stylesheet" href="/src/onlyCSS/catalog.css">
+     <link rel="stylesheet" href="/src/onlyCSS/product.css">
+     <link rel="stylesheet" href="/src/onlyCSS/home.css">
+     <link rel="stylesheet" href="/src/onlyCSS/footer.css">
+     
 </head>
 <body>
  
@@ -20,6 +25,12 @@
           <img src="/icons/menu.svg" alt="" class=catalogIcon">
           <span>Каталог</span>
       </button>
+
+      <div id="catalogDropdown" class="catalogDropdown" >
+           <a href="" data-category="electronics">Смартфоны и гаджеты</a>
+           <a href="" data-category="accessories">Аксессуары</a>
+           <a href="" data-category="laptops">Ноутбуки</a>
+      </div>
 
       <div class="searchWrapper">
           <input type="text" class="searchInput" placeholder="Искать товары...">
@@ -65,20 +76,74 @@
     </div>
 
     <section class="homeSection">
-        <h2 class="sectionTitle">Рекомендации</h2>
+        <h2 class="sectionTitle">Смартфоны и гаджеты</h2>
         <div id="recommendationsGrid" class="productGrid"></div>
     </section>
 
     <section class="homeSection">
-        <h2 class="sectionTitle">Смартфоны и гаджеты</h2>
+        <h2 class="sectionTitle">Аксессуары</h2>
         <div id="electronicsGrid" class="productGrid"></div>
     </section>
 
     <section class="homeSection">
-        <h2 class="sectionTitle">Все товары</h2>
+        <h2 class="sectionTitle">Ноутбуки</h2>
         <div id="productGrid" class="productGrid"></div>
     </section>
 </main>
+
+<footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+            <h4>О нас</h4>
+              <ul>
+                 <li><a href="#">Пункты выдачи</a></li>
+                 <li><a href="#">Вакансии</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Пользователям</h4>
+                <ul>
+                    <li><a href="#">Связаться с нами</a></li>
+                    <li><a href="#">Вопрос - Ответ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Для предпринимателей</h4>
+                <ul>
+                    <li><a href="#">Продавайте на Uzum</a></li>
+                    <li><a href="#">Вход для продавцов</a></li>
+                    <li><a href="#">Открыть пункт выдачи</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Скачать приложение</h4>
+                <div class="app-downloads">
+                    <div class="app-item">
+                        <img src="/icons/apple.svg" alt="">
+                        <span>App Store</span>
+                    </div>
+                    <div class="app-item">
+                        <img src="/icons/google-play.svg" alt="">
+                        <span>Google Play</span>
+                    </div>
+                </div>
+
+                <h4 class="social-title">Uzum в соцсетях</h4>
+                <div class="social-links">
+                    <img src="/icons/instagram.svg" alt="">
+                    <img src="/icons/telegram.svg" alt="">
+                    <img src="/icons/facebook.svg" alt="">
+                    <img src="/icons/youtube.svg" alt="">
+                </div>
+            </div>
+        </div>
+        
+           <div class="footer-copyright">
+            <p>&copy; 2025 Uzum Market. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
 
 <style>
     body {
