@@ -1,4 +1,4 @@
-import { products } from './data.js'; 
+import { products } from "./data.js";
 
 const grid = document.getElementById('productGrid');
 
@@ -7,8 +7,8 @@ function renderProducts() {
     return;
   }  
 
-grid.innerHTML = products.map(product => `
-    <div class="product-card"> 
+  grid.innerHTML = products.map(product => `
+    <div class="product-card" data-id="${product.id}"> 
         <div class="card-image-container">
             <img src="${product.image}" alt="${product.title}">
             <button class="wishlist-btn">
@@ -30,13 +30,18 @@ grid.innerHTML = products.map(product => `
                     <p class="old-price">${product.oldPrice.toLocaleString()} сум</p>
                     <p class="current-price">${product.price.toLocaleString()} сум</p>
                 </div>
-                <button class="add-to-cart">
+                <button class="add-to-cart" 
+                        data-id="${product.id}"
+                        data-title="${product.title}"
+                        data-price="${product.price}"
+                        data-image="${product.image}">
                     <img src="/icons/shopping-bag.svg" class="icon-small">
                 </button>
             </div>
         </div>
     </div>
     `
-).join('');
+  ).join('');
 }
+
 renderProducts();

@@ -45,3 +45,7 @@ export const products = [
         image: "https://images.uzum.uz/d0h5ct27s4fo7mq8vc5g/original.jpg"
     }
 ];
+
+
+
+
