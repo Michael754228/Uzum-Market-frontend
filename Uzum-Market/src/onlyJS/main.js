@@ -1,6 +1,5 @@
 
 
-import "./data.js"
 import "./auth.js"
 import "./backend.js"
 import "./catalog.js"

@@ -70,7 +70,7 @@ async function loginUser() {
   }
 }
 
-async function getAllProducts() {
+export async function getAllProducts() {
   try {
     const res = await fetch(
       `${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/main/products`
@@ -78,6 +78,7 @@ async function getAllProducts() {
     const data = await res.json();
 
     console.log(data);
+    return data;
   } catch (error) {
     throw new Error("Internal Server Error", error);
   }
