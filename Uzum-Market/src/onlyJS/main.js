@@ -1,11 +1,9 @@
 
-
 import "./auth.js"
 import "./backend.js"
 import "./catalog.js"
 import "./favorites.js"
 import "./product.js"
-import { initCart } from "./cart.js";
 
 import "../onlyCSS/cart.css"
 import "../onlyCSS/catalog.css"
@@ -17,10 +15,8 @@ import "../onlyCSS/product.css"
 
 import "../components/scripts/footer.js"
 import "../components/scripts/header.js"
+import { initCart } from "./cart.js"
 
-
-document. addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     initCart()
 });
-
-

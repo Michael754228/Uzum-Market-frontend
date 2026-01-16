@@ -1,223 +1,231 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Uzum Market</title>
-    <link rel="stylesheet" href="/src/onlyCSS/main.css">
-     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-     <link rel="stylesheet" href="/src/onlyCSS/catalog.css">
-     <link rel="stylesheet" href="/src/onlyCSS/product.css">
-     <link rel="stylesheet" href="/src/onlyCSS/home.css">
-     <link rel="stylesheet" href="/src/onlyCSS/footer.css">
-     
+  <meta charset="UTF-8">
+  <title>Uzum Market</title>
+  <link rel="stylesheet" href="/src/onlyCSS/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/src/onlyCSS/catalog.css">
+  <link rel="stylesheet" href="/src/onlyCSS/product.css">
+  <link rel="stylesheet" href="/src/onlyCSS/home.css">
+  <link rel="stylesheet" href="/src/onlyCSS/footer.css">
+
 </head>
-    <style>
-        body {
-            background: #fff;
-            margin: 0;
-            padding: 0;
-        }
-    
-        .swiper-container {
-            position: relative;
-            width: 100%;
-            height: 420px; 
-            border-radius: 16px;
-            margin: 20px 0px;
-            overflow: hidden;
-        }
-    
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    
-        .sectionTitle {
-            margin: 30px 0px 15px;
-            font-size: 28px;
-            font-weight: 700;
-        }
-    
-        .homeSection {
-            margin-bottom: 40px;
-        }
-    
-        .swiper-button-next, .swiper-button-prev{
-          color: rgb(98, 15, 175);
-          width: 40px;
-          height: 40px;
-          
-        }
-    
-    </style>
+<style>
+  body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper-container {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    border-radius: 16px;
+    margin: 20px 0px;
+    overflow: hidden;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sectionTitle {
+    margin: 30px 0px 15px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .homeSection {
+    margin-bottom: 40px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: rgb(98, 15, 175);
+    width: 40px;
+    height: 40px;
+
+  }
+</style>
+
 <body>
- 
 
-<header class="mainHeader" id="header">
-  <div class="container">
-    <div class="headerTop">
-      <div class="logoContainer">
-         <img src="/public/icons/logo.svg" alt="" class="mainLogo">
-      </div>
 
-      <button class="catalogBtn">
+  <header class="mainHeader" id="header">
+    <div class="container">
+      <div class="headerTop">
+        <div class="logoContainer">
+          <img src="/public/icons/logo.svg" alt="" class="mainLogo">
+        </div>
+
+        <button class="catalogBtn">
           <img src="/icons/menu.svg" alt="" class="catalogIcon">
           <span>Каталог</span>
-      </button>
+        </button>
 
-      <div id="catalogDropdown" class="catalogDropdown" >
-        <a href="#" data-category="gaming">Компьютеры и гейминг</a>
-        <a href="#" data-category="audio">Аудио и аксессуары</a>
-        <a href="#" data-category="tv">Телевизоры</a>
-        <a href="#" data-category="kitchen">Бытовая техника</a>
-        <a href="#" data-category="home">Музыкальные инструменты</a>
-      </div>
+        <div id="catalogDropdown" class="catalogDropdown">
+          <a href="#" data-category="gaming">Компьютеры и гейминг</a>
+          <a href="#" data-category="audio">Аудио и аксессуары</a>
+          <a href="#" data-category="tv">Телевизоры</a>
+          <a href="#" data-category="kitchen">Бытовая техника</a>
+          <a href="#" data-category="home">Музыкальные инструменты</a>
+        </div>
 
-      <div class="searchWrapper">
+        <div class="searchWrapper">
           <input type="text" class="searchInput" placeholder="Искать товары...">
           <button class="searchBtn">
-              <img src="/icons/search.svg" alt="" class="icon">
+            <img src="/icons/search.svg" alt="" class="icon">
           </button>
-      </div>
+        </div>
 
-      <div class="userActions">
-        <div class="actionItem">
+        <div class="userActions">
+          <div class="actionItem">
             <img src="/icons/user.svg" alt="" class="icon">
             <span><a href="./src/onlyJS/cart.js">Войти</a></span>
+          </div>
+          <div class="actionItem">
+            <img src="/icons/heart.svg" alt="" class="icon">
+            <span><a href="">Избранное</a></span>
+          </div>
+          <div class="actionItem">
+            <a href="./src/onlyHTML/cart.html"
+              style="text-decoration: none; color: inherit; position: relative; display: flex; flex-direction: column; align-items: center;">
+              <img src="/icons/shopping-cart.svg" alt="" class="icon">
+              <span>Корзина</span>
+              <span id="cart-badge" class="cart-badge"></span>
+            </a>
+          </div>
         </div>
-          <div class="actionItem">
-           <img src="/icons/heart.svg" alt="" class="icon">
-           <span><a href="">Избранное</a></span>
-          </div>
-          <div class="actionItem">
-           <img src="/icons/shopping-cart.svg" alt="" class="icon">
-           <span><a href="">Корзина</a></span>
-          </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="container">
+  <main class="container">
     <div class="swiper-container mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </div>
-            <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </div>
-            <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
-  <section class="homeSection">
-    <h2 class="sectionTitle">Компьютеры и гейминг</h2>
-    <div id="gamingGrid" class="productGrid"></div>
-  </section>
+    <section class="homeSection">
+      <h2 class="sectionTitle">Компьютеры и гейминг</h2>
+      <div id="gamingGrid" class="productGrid"></div>
+    </section>
 
-  <section class="homeSection">
-    <h2 class="sectionTitle">Аудио и аксессуары</h2>
-    <div id="audioGrid" class="productGrid"></div>
-  </section>
+    <section class="homeSection">
+      <h2 class="sectionTitle">Аудио и аксессуары</h2>
+      <div id="audioGrid" class="productGrid"></div>
+    </section>
 
-  <section class="homeSection">
-    <h2 class="sectionTitle">Телевизоры</h2>
-    <div id="tvGrid" class="productGrid"></div>
-  </section>
+    <section class="homeSection">
+      <h2 class="sectionTitle">Телевизоры</h2>
+      <div id="tvGrid" class="productGrid"></div>
+    </section>
 
-  <section class="homeSection">
-    <h2 class="sectionTitle">Бытовая техника</h2>
-    <div id="kitchenGrid" class="productGrid"></div>
-  </section>
+    <section class="homeSection">
+      <h2 class="sectionTitle">Бытовая техника</h2>
+      <div id="kitchenGrid" class="productGrid"></div>
+    </section>
 
-  <section class="homeSection">
-    <h2 class="sectionTitle">Мебель и комфорт</h2>
-    <div id="homeGrid" class="productGrid"></div> </section>
-</main>
+    <section class="homeSection">
+      <h2 class="sectionTitle">Мебель и комфорт</h2>
+      <div id="homeGrid" class="productGrid"></div>
+    </section>
+  </main>
 
-<footer class="main-footer">
+  <footer class="main-footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-column">
-            <h4>О нас</h4>
-              <ul>
-                 <li><a href="#">Пункты выдачи</a></li>
-                 <li><a href="#">Вакансии</a></li>
-                </ul>
+          <h4>О нас</h4>
+          <ul>
+            <li><a href="#">Пункты выдачи</a></li>
+            <li><a href="#">Вакансии</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Пользователям</h4>
+          <ul>
+            <li><a href="#">Связаться с нами</a></li>
+            <li><a href="#">Вопрос - Ответ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Для предпринимателей</h4>
+          <ul>
+            <li><a href="#">Продавайте на Uzum</a></li>
+            <li><a href="#">Вход для продавцов</a></li>
+            <li><a href="#">Открыть пункт выдачи</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Скачать приложение</h4>
+          <div class="app-downloads">
+            <div class="app-item">
+              <img src="/icons/apple.svg" alt="">
+              <span>App Store</span>
             </div>
-            <div class="footer-column">
-                <h4>Пользователям</h4>
-                <ul>
-                    <li><a href="#">Связаться с нами</a></li>
-                    <li><a href="#">Вопрос - Ответ</a></li>
-                </ul>
+            <div class="app-item">
+              <img src="/icons/google-play.svg" alt="">
+              <span>Google Play</span>
             </div>
-            <div class="footer-column">
-                <h4>Для предпринимателей</h4>
-                <ul>
-                    <li><a href="#">Продавайте на Uzum</a></li>
-                    <li><a href="#">Вход для продавцов</a></li>
-                    <li><a href="#">Открыть пункт выдачи</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Скачать приложение</h4>
-                <div class="app-downloads">
-                    <div class="app-item">
-                        <img src="/icons/apple.svg" alt="">
-                        <span>App Store</span>
-                    </div>
-                    <div class="app-item">
-                        <img src="/icons/google-play.svg" alt="">
-                        <span>Google Play</span>
-                    </div>
-                </div>
+          </div>
 
-                <h4 class="social-title">Uzum в соцсетях</h4>
-                <div class="social-links">
-                    <img src="/icons/instagram.svg" alt="">
-                    <img src="/icons/telegram.svg" alt="">
-                    <img src="/icons/facebook.svg" alt="">
-                    <img src="/icons/youtube.svg" alt="">
-                </div>
-            </div>
+          <h4 class="social-title">Uzum в соцсетях</h4>
+          <div class="social-links">
+            <img src="/icons/instagram.svg" alt="">
+            <img src="/icons/telegram.svg" alt="">
+            <img src="/icons/facebook.svg" alt="">
+            <img src="/icons/youtube.svg" alt="">
+          </div>
         </div>
-        
-           <div class="footer-copyright">
-            <p>&copy; 2025 Uzum Market. Все права защищены.</p>
-        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2026 Uzum Market. Все права защищены.</p>
+      </div>
     </div>
-</footer>
+  </footer>
 
 
-       <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        effect: "fade",
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-</div>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  </div>
 
 
-    <script type="module" src="/src/onlyJS/main.js"></script>
+  <script type="module" src="/src/onlyJS/main.js"></script>
 </body>
+
 </html>

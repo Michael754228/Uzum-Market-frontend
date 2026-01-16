@@ -30,7 +30,7 @@
 .searchWrapper {
     flex-grow: 1;
     display: flex;
-    border: 2px solid #7e7d80; 
+    border: 2px solid #7e7d80;
     border-radius: 8px;
 }
 
@@ -85,13 +85,13 @@
 }
 
 .installment-badge {
-    background-color: #ffff00; 
+    background-color: #ffff00;
     color: #000;
     font-size: 0.75rem;
     font-weight: 600;
     padding: 2px 6px;
     border-radius: 4px;
-    align-self: flex-start; 
+    align-self: flex-start;
     margin: 4px 0;
 }
 
@@ -99,11 +99,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 .product-card:hover {
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-image-container {
@@ -146,8 +146,8 @@
 
 .price-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
     margin-top: auto;
 }
 
@@ -155,7 +155,6 @@
     font-size: 11px;
     text-decoration: line-through;
     color: #8b8e99;
-    margin-bottom: 2px;
 }
 
 .current-price {
@@ -165,11 +164,11 @@
 }
 
 .add-to-cart {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid #e2e5eb;
-    background: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background: #7000ff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +177,11 @@
 }
 
 .add-to-cart:hover {
-    background: #f2f4f7;
+    background: #5900cc;
+}
+
+.add-to-cart img {
+    filter: brightness(0) invert(1);
 }
 
 .icon-small {
@@ -189,7 +192,7 @@
 
 .rating-star-icon {
     width: 14px;
-    height: 14px;  
+    height: 14px;
 }
 
 .reviews-count {
@@ -201,7 +204,7 @@
 .wishlist-btn {
     position: absolute;
     top: 8px;
-    right: 8px; 
+    right: 8px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -214,13 +217,26 @@
     transform: scale(1.1);
 }
 
+.favorite-icon {
+    fill: transparent;
+    stroke: #8b8e99;
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
+}
+
+.wishlist-btn.active .favorite-icon {
+    fill: #7000ff;
+    stroke: #7000ff;
+}
+
 .icon-small {
     width: 20px;
     height: 20px;
     display: block;
 }
 
-.catalogDropdown{
+.catalogDropdown {
     display: none;
     position: absolute;
     top: 70px;
@@ -248,14 +264,14 @@
 
 .catalogDropdown a:hover {
     background-color: #f2f4f7;
-    color: #7000ff; 
+    color: #7000ff;
 }
 
 .catalogBtn {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: #f0e8ff; 
+    background-color: #f0e8ff;
     color: rgb(146, 72, 237);
     border: none;
     border-radius: 8px;
@@ -267,15 +283,68 @@
 }
 
 .catalogBtn:hover {
-    background-color: #e5d8ff; 
+    background-color: #e5d8ff;
 }
 
-.catalogBtn img {  
+.catalogBtn img {
     width: 20px;
     height: 20px;
 }
 
-.actionItem a {
-    text-decoration: none;
-    color: inherit;
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #7000ff;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    /* Square with rounded corners as requested */
+    display: none;
+    /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+.actionItem {
+    position: relative;
+    /* For absolute positioning of badge */
+}
+
+.cart-counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #edeef0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.counter-btn {
+    width: 32px;
+    height: 100%;
+    border: none;
+    background: #fff;
+    font-size: 18px;
+    color: #1f2026;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.counter-btn:hover {
+    background: #edeef0;
+}
+
+.counter-value {
+    font-size: 14px;
+    font-weight: 500;
 }
