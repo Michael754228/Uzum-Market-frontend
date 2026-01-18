@@ -1,14 +1,12 @@
-/* Cart Page Layout */
 .cart-page {
     padding-top: 20px;
     padding-bottom: 60px;
     min-height: 60vh;
 }
 
-/* Empty Cart */
 .empty-cart {
     text-align: center;
-    padding: 60px 0;
+    padding: 60px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +25,7 @@
 }
 
 .empty-cart p {
-    color: #000;
+    color: black;
     max-width: 400px;
     line-height: 1.5;
 }
@@ -75,11 +73,10 @@
     color: #7000ff;
 }
 
-/* Cart Items */
 .cart-item {
     display: flex;
     gap: 16px;
-    padding: 20px 0;
+    padding: 20px 0px;
     border-bottom: 1px solid #edeef0;
     position: relative;
 }
@@ -126,7 +123,7 @@
     gap: 20px;
 }
 
-.item-counter {
+.cart-counter {
     width: 100px;
     height: 32px;
 }
@@ -172,7 +169,6 @@
     color: #fa5e5e;
 }
 
-/* Order Summary */
 .cart-right {
     position: sticky;
     top: 20px;

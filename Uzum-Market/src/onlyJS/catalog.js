@@ -9,13 +9,16 @@ const grids = {
     home: document.getElementById("homeGrid")
 };
 
-function createProductCard(product) {
+export function createProductCard(product) {
     const imageUrl = (product.media[0]);
     const productId = product._id;
     const price = product.price;
     const oldPrice = product.oldPrice;
 
     const count = window.cart ? window.cart.getItemCount(productId) : 0;
+    const isFavorite = window.favoritesManager ? window.favoritesManager.isFavorite(productId) : false;
+    const heartFill = isFavorite ? '#7000ff' : 'none';
+    const heartStroke = isFavorite ? '#7000ff' : 'currentColor';
 
     let buttonHtml;
 
@@ -44,9 +47,9 @@ function createProductCard(product) {
     <div class="product-card" data-id="${productId}" onclick="goToProduct('${productId}')" style="cursor:pointer"> 
         <div class="card-image-container">
             <img src="${imageUrl}" alt="${product.title}">
-            <button class="wishlist-btn" onclick="event.stopPropagation(); toggleFavorite(this)">
+            <button class="wishlist-btn ${isFavorite ? 'active' : ''}" onclick="event.stopPropagation(); toggleFavorite(this)">
                 <svg width="20" height="20" viewBox="0 0 24 24" stroke-width="2" class="favorite-icon">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" style="fill: ${heartFill}; stroke: ${heartStroke}"></path>
                 </svg>
             </button>
         </div>
@@ -99,7 +102,10 @@ window.decreaseItem = function (id) {
 
 
 window.addEventListener('cartUpdated', () => {
-    renderProducts();
+
+    if (document.getElementById("gamingGrid")) {
+        renderProducts();
+    }
 });
 
 async function renderProducts() {
@@ -140,7 +146,10 @@ async function renderProducts() {
     }
 }
 
-renderProducts();
+if (document.getElementById("gamingGrid")) {
+    renderProducts();
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const catalogBtn = document.querySelector('.catalogBtn');
@@ -157,4 +166,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 })
+
 

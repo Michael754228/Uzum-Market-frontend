@@ -148,8 +148,8 @@ async function getUserInfo() {
 // getData();
 // healthcheck();
 // loginUser();
-// removeFromFavorites();
-// addToCart();
+removeFromFavorites();
+addToCart();
 getAllProducts();
-// getUserInfo();
+getUserInfo();
 
