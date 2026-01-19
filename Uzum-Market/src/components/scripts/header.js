@@ -33,7 +33,7 @@ if (header) {
       <div class="userActions">
         <div class="actionItem">
             <img src="/icons/user.svg" alt="" class="icon">
-            <span><a href="/src/onlyHTML/cart.html" style="text-decoration: none; color: inherit;">Войти</a></span>
+             <span><button type="button" class="EMERGENCY_LOGIN" id="loginBtn" style="all: unset; cursor: pointer; color: inherit;">Войти</button></span>
         </div>
         <div class="actionItem">
           <img src="/icons/heart.svg" alt="" class="icon">
