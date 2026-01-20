@@ -1,3 +1,6 @@
+console.log("Backend жив");
+
+
 async function getData() {
   try {
     const res = await fetch("/backend/db.json");

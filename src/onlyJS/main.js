@@ -1,6 +1,7 @@
 
+
 import "./auth.js"
-import "./backend.js"
+// import "./backend.js"
 import "./catalog.js"
 import "./favorites.js"
 import "./product.js"

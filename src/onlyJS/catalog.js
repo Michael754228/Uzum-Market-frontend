@@ -16,8 +16,6 @@ export function createProductCard(product) {
     const oldPrice = product.oldPrice;
 
     const count = window.cart ? window.cart.getItemCount(productId) : 0;
-
-    // Check if favorite
     const isFavorite = window.favoritesManager ? window.favoritesManager.isFavorite(productId) : false;
     const heartFill = isFavorite ? '#7000ff' : 'none';
     const heartStroke = isFavorite ? '#7000ff' : 'currentColor';
@@ -104,9 +102,7 @@ window.decreaseItem = function (id) {
 
 
 window.addEventListener('cartUpdated', () => {
-    // Only re-render if we are on global scope (catalog page), 
-    // to avoid conflict if catalog.js is imported elsewhere without specific context.
-    // However, existing logic just calls renderProducts() which depends on 'grids'.
+
     if (document.getElementById("gamingGrid")) {
         renderProducts();
     }
@@ -150,7 +146,6 @@ async function renderProducts() {
     }
 }
 
-// Initial render only if elements exist
 if (document.getElementById("gamingGrid")) {
     renderProducts();
 }
