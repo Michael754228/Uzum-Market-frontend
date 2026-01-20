@@ -87,8 +87,7 @@ export async function getAllProducts() {
 async function removeFromFavorites() {
   try {
     const res = await fetch(
-      `${
-        import.meta.env.VITE_BACKEND_BASE_URL
+      `${import.meta.env.VITE_BACKEND_BASE_URL
       }/api/v1/user/favorites/693d0b2d7b7d4a5c0f2c71b9`,
       {
         method: "DELETE",
@@ -108,8 +107,7 @@ async function removeFromFavorites() {
 async function addToCart() {
   try {
     const res = await fetch(
-      `${
-        import.meta.env.VITE_BACKEND_BASE_URL
+      `${import.meta.env.VITE_BACKEND_BASE_URL
       }/api/v1/user/cart/693d0b2d7b7d4a5c0f2c71b9`,
       {
         method: "POST",
@@ -150,6 +148,6 @@ async function getUserInfo() {
 // loginUser();
 // removeFromFavorites();
 // addToCart();
-getAllProducts();
+// getAllProducts();
 // getUserInfo();
 

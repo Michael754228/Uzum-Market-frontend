@@ -6,12 +6,12 @@ if (header) {
     <div class="headerTop">
       <div class="logoContainer">
          <a href="/">
-            <img src="/public/icons/logo.svg" alt="" class="logoImg">
+            <img src="/icons/logo.svg" alt="" class="mainLogo">
          </a>
       </div>
 
       <button class="catalogBtn">
-          <img src="/public/icons/menu.svg" alt="" class="catalogIcon">
+          <img src="/icons/menu.svg" alt="" class="catalogIcon">
           <span>Каталог</span>
       </button>
 
@@ -33,11 +33,11 @@ if (header) {
       <div class="userActions">
         <div class="actionItem">
             <img src="/icons/user.svg" alt="" class="icon">
-            <span><a href="/src/onlyHTML/cart.html" style="text-decoration: none; color: inherit;">Войти</a></span>
+            <span><a href="" id="loginBtn" style="text-decoration: none; color: inherit;">Войти</a></span>
         </div>
         <div class="actionItem">
           <img src="/icons/heart.svg" alt="" class="icon">
-          <span>Избранное</span>
+          <span><a href="/src/onlyHTML/favorites.html" style="text-decoration: none; color: inherit;">Избранное</a></span>
         </div>
         <div class="actionItem">
           <a href="/src/onlyHTML/cart.html"
