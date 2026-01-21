@@ -22,8 +22,10 @@ function updateUserDisplay() {
             const actionItem = loginBtn.closest('.actionItem');
             if (actionItem) {
                 actionItem.innerHTML = `
-                    <img src="/icons/user.svg" alt="" class="icon">
-                    <span class="user-name">${userData.firstName}</span>
+                    <a href="/user.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
+                        <img src="/icons/user.svg" alt="" class="icon">
+                        <span class="user-name">${userData.firstName}</span>
+                    </a>
                 `;
             }
         }
@@ -56,10 +58,7 @@ function handleRegistration(event) {
 
     closeAuthModal();
     updateUserDisplay();
-
     document.getElementById('authForm').reset();
-
-    alert(`Добро пожаловать, ${firstName}!`);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

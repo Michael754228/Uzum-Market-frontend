@@ -7,7 +7,6 @@ import "./favorites.js"
 import "./product.js"
 
 import "../onlyCSS/cart.css"
-import "../onlyCSS/catalog.css"
 import "../onlyCSS/footer.css"
 import "../onlyCSS/header.css"
 import "../onlyCSS/home.css"
