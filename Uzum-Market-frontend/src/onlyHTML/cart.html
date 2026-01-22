@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="../onlyCSS/main.css">
+    <link rel="stylesheet" href="../onlyCSS/cart.css">
+    <link rel="stylesheet" href="../onlyCSS/footer.css">
+</head>
+
+<body>
+
+    <header class="mainHeader" id="header">
+        <div class="container">
+            <div class="headerTop">
+                <div class="logoContainer">
+                    <a href="../../index.html">
+                        <img src="/public/icons/logo.svg" alt="" class="mainLogo">
+                    </a>
+                </div>
+
+                <div class="searchWrapper">
+                    <input type="text" class="searchInput" placeholder="Искать товары...">
+                    <button class="searchBtn">
+                        <img src="public/icons/search.svg" alt="" class="icon">
+                    </button>
+                </div>
+
+                <div class="userActions">
+                    <div class="actionItem">
+                        <img src="/icons/user.svg" alt="" class="icon">
+                        <span>Войти</span>
+                    </div>
+                    <div class="actionItem">
+                        <img src="/icons/heart.svg" alt="" class="icon">
+                        <span>Избранное</span>
+                    </div>
+                    <div class="actionItem">
+                        <a href="./cart.html"
+                            style="text-decoration: none; color: inherit; position: relative; display: flex; flex-direction: column; align-items: center;">
+                            <img src="/icons/shopping-cart.svg" alt="" class="icon">
+                            <span>Корзина</span>
+                            <span id="cart-badge" class="cart-badge"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container cart-page">
+        <div id="empty-cart" class="empty-cart" style="display: flex;">
+            <img src="/public/images/shopocat.490a4a1.png" alt="Empty Cart">
+            <h2>В корзине пока нет товаров</h2>
+            <p>Начните с главной страницы - нужный товар можно найти через поиск или заглянуть в подборки</p>
+            <a href="../../index.html" class="primary-btn">На главную</a>
+        </div>
+
+        <div id="full-cart" class="full-cart" style="display: none;">
+            <div class="cart-left">
+                <div class="cart-header">
+                    <h2 id="cart-title">Ваша корзина</h2>
+                    <div class="cart-controls">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked id="select-all">
+                            <span class="checkmark"></span>
+                            Снять все
+                        </label>
+                    </div>
+                </div>
+
+                <div id="cart-items" class="cart-items">
+
+                </div>
+            </div>
+
+            <div class="cart-right">
+                <div class="order-summary">
+                    <h3>Ваш заказ</h3>
+                    <div class="summary-row">
+                        <span id="summary-count">Товары (0):</span>
+                        <span id="summary-price">0 сум</span>
+                    </div>
+
+                    <div class="summary-total">
+                        <span>Итого:</span>
+                        <div class="total-price-block">
+                            <span id="total-price" class="total-price">0 сум</span>
+                            <span id="savings" class="savings">Вы экономите: 0 сум</span>
+                        </div>
+                    </div>
+
+                    <button class="checkout-btn">Перейти к оформлению</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script type="module" src="../onlyJS/cart.js"></script>
+    <script type="module" src="../components/scripts/header.js"></script>
+</body>
+
+</html>
