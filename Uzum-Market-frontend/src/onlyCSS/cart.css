@@ -41,7 +41,6 @@
     display: inline-block;
 }
 
-/* Full Cart Grid */
 .full-cart {
     display: grid;
     grid-template-columns: 1fr 340px;
